@@ -138,7 +138,7 @@ body.dark-mode input#recuperacion:checked ~ .blog-filtros .tags label[for="recup
     cursor: pointer;
     background: rgb(204, 198, 198);
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 20px;
     font-weight: bold;
     border: 2px solid transparent;
     transition: all 0.3s ease;
