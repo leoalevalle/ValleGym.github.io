@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALLE GYM - Inicio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo Valle GYM" class="logo">
+      <h1>VALLE GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#">Clases</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+          </div>
+        </li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="video-bg">
+        <iframe 
+          src="https://www.youtube.com/embed/JYNa_9pYLGw?autoplay=1&mute=1&loop=1&playlist=JYNa_9pYLGw&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0" 
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    <div class="overlay">
+        <div class="overlay-texto">
+            <h2>¡Unete!</h2>
+            <p>Para verte y sentirte mejor</p>
+          </div>
+    </div>
+  </section>
+
+  <!-- CLASES DESTACADAS -->
+  <section class="clases-destacadas">
+    <h2>Clases Destacadas</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/img/yoga.jpg" alt="Yoga">
+        <h3>Yoga</h3>
+      </div>
+      <div class="card">
+        <img src="assets/img/crossfit.jpg" alt="Crossfit">
+        <h3>Crossfit</h3>
+      </div>
+      <div class="card">
+        <img src="assets/img/musculacion.jpg" alt="Musculación">
+        <h3>Musculacion</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTADOR ANIMADO -->
+  <section class="contador">
+    <div><span class="numero">500+</span><p>Socios Satisfechos</p></div>
+    <div><span class="numero">10+</span><p>Entrenadores de Primer Nivel</p></div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios">
+    <h2>Comentarios</h2>
+    <div class="carrusel-slider">
+        <div class="testimonio">"Muy buena atencion" - <strong>Rocio F.</strong></div>
+        <div class="testimonio">"Excelente la calidad del servicio" - <strong>Juan C.</strong></div>
+        <div class="testimonio">"Los entrenadores son realmente buenos" - <strong>Leonel M.</strong></div>
+        <div class="testimonio">"Me ayudo mucho, lo recomiendo" - <strong>Angel D.</strong></div>
+        <div class="testimonio">"El mejor gym de la zona" - <strong>Agustina S.</strong></div>
+    </div>
+  </section>
+
+  <script src="js/style.js"></script>
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="button">Suscribirse</button>
+      </form>
+      <div class="redes">
+        <a href="https://www.facebook.com/"><img src="assets/icons/Facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="assets/icons/Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.x.com/"><img src="assets/icons/Twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+</body>
+</html>

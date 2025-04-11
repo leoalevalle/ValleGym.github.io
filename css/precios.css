@@ -1,0 +1,218 @@
+/* Variables de tema */
+:root {
+  --bg-color: #f9f9f9;
+  --bg-color1: #cdcaca;
+  --text-color: #333;
+  --text-color1: #1a1a1a;
+  --header-bg: #595d80;
+  --card-bg: #fff;
+  --highlight: #ffcc00;
+  --footer-bg: #222;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --bg-color1: #bdb6b6;
+  --text-color: #eee;
+  --text-color1: #000;
+  --header-bg: #000;
+  --card-bg: #2b2b2b;
+  --highlight: #ffa500;
+  --footer-bg: #111;
+}
+
+/* Estructura general */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+
+footer {
+  background-color: var(--footer-bg);
+}
+
+nav a:hover,
+.submenu a:hover {
+  color: var(--highlight);
+}
+
+/* Toggle Modo Oscuro */
+#modo-toggle {
+  margin-left: auto;
+  background: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease;
+}
+
+#modo-toggle:hover {
+  background-color: #ddd;
+}
+
+/* Toggle mensual/anual */
+.toggle-container {
+  margin-bottom: 2rem;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  background: #ddd;
+  border-radius: 14px;
+  padding: 0.3rem;
+  cursor: pointer;
+  width: 180px;
+  height: 32px;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body.dark-mode .switch {
+  background: #fff9f9;
+  color: #000;
+}
+
+.switch .slider {
+  background: #4caf50;
+  border-radius: 14%;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+#toggle:checked + .switch .slider {
+  transform: translateX(90px);
+}
+
+.option {
+  flex: 1;
+  text-align: center;
+  z-index: 1;
+  font-weight: bold;
+}
+
+body.dark-mode #toggle:not(:checked) ~ .switch .option:first-child,
+body.dark-mode #toggle:checked ~ .switch .option:last-child {
+  color: white;
+}
+
+/* Tabla de precios */
+.precios {
+  text-align: center;
+}
+
+.tabla-precios {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #e2dbdb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+body.dark-mode .plan {
+  background: #797676;
+  color: #000000;
+}
+
+.plan:hover {
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Toggle planes */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  background: #ddd;
+  border-radius: 14px;
+  padding: 0.3rem;
+  cursor: pointer;
+  position: relative;
+  width: 180px;
+  height: 32px;
+  justify-content: space-between;
+}
+
+.switch .slider {
+  background: #4caf50;
+  border-radius: 14%;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+#toggle:checked + .switch .slider {
+  transform: translateX(90px);
+}
+
+/* Precios y recomendado */
+.precio.mensual { display: block; }
+.precio.anual { display: none; }
+
+.planes-container:has(#toggle:checked) .precio.mensual { display: none; }
+.planes-container:has(#toggle:checked) .precio.anual { display: block; }
+
+.recomendado-mensual::after {
+  content: "★ Recomendado";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #4caf50;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* Tooltip */
+.tooltip-text {
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  background: black;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+}

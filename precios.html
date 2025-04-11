@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALLE GYM - precios</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/precios.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo Valle GYM" class="logo">
+      <h1>VALLE GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#">Clases</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+          </div>
+        </li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="precios">
+    <h2>Compará nuestros Planes</h2>
+  
+    <!-- Toggle mensual/anual -->
+    <div class="planes-container">
+      <div class="toggle-container">
+        <input type="checkbox" id="toggle" hidden>
+        <label for="toggle" class="switch">
+          <span class="option">Mensual</span>
+          <span class="slider"></span>
+          <span class="option">Anual</span>
+        </label>
+      </div>
+  
+      <!-- Tabla de precios -->
+      <div class="tabla-precios">
+  
+        <!-- Plan Básico -->
+        <div class="plan basico">
+          <h3>Básico</h3>
+          <div class="ahorro">Pagando el año, ¡te regalamos un mes!</div>
+          <p class="precio mensual">AR$ 9.000</p>
+          <p class="precio anual">AR$ 99.000</p>
+          <ul>
+            <li class="tooltip">Acceso a sala de musculación
+              <span class="tooltip-text">Incluye zona de pesas, cardio y máquinas</span>
+            </li>
+            <li>3 días por semana</li>
+            <li>1 clase grupal semanal</li>
+            <li>Sin entrenador</li>
+          </ul>
+          <button>Elegir</button>
+        </div>
+  
+        <!-- Plan Intermedio -->
+        <div class="plan intermedio recomendado-mensual">
+          <h3>Intermedio</h3>
+          <div class="ahorro ahorro-intermedio">15% OFF en el plan anual</div>
+          <p class="precio mensual">AR$ 14.500</p>
+          <p class="precio anual">AR$ 148.000</p>
+          <ul>
+            <li class="tooltip">Acceso completo
+              <span class="tooltip-text">Sala de musculación, cardio, salón de clases</span>
+            </li>
+            <li>5 días por semana</li>
+            <li>Hasta 3 clases semanales</li>
+            <li class="tooltip">Entrenador grupal
+              <span class="tooltip-text">Sesiones dirigidas con entrenador en grupo reducido</span>
+            </li>
+          </ul>
+          <button>Elegir</button>
+        </div>
+  
+        <!-- Plan Premium -->
+        <div class="plan premium recomendado-anual">
+          <h3>Premium</h3>
+          <div class="ahorro ahorro-premium">¡25% de descuento en anualidad + 1 consulta nutricional gratis!</div>
+          <p class="precio mensual">AR$ 21.000</p>
+          <p class="precio anual">AR$ 189.000</p>
+          <ul>
+            <li class="tooltip">Acceso libre total
+              <span class="tooltip-text">Todas las áreas sin restricciones</span>
+            </li>
+            <li>Pase ilimitado (7 días)</li>
+            <li class="tooltip">Clases ilimitadas
+              <span class="tooltip-text">Incluye yoga, spinning, funcional, etc.</span>
+            </li>
+            <li class="tooltip">Entrenador personal 1 vez/semana
+              <span class="tooltip-text">Incluido en el plan (opcional)</span>
+            </li>
+          </ul>
+          <button>Elegir</button>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+ 
+  <div style="height: 3rem;"></div>
+
+  <script src="js/style.js"></script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="newsletter">
+    <h3>Suscribite al newsletter</h3>
+    <form  >
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit" class="button">Suscribirse</button>
+    </form>
+    <div class="redes">
+      <a href="https://www.facebook.com/"><img src="assets/icons/Facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/"><img src="assets/icons/Instagram.svg" alt="Instagram"></a>
+      <a href="https://www.x.com/"><img src="assets/icons/Twitter.svg" alt="Twitter"></a>
+    </div>
+  </div>
+  <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</footer>
+
+</body>
+</html>
