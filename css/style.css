@@ -233,19 +233,22 @@ body.dark-mode nav ul li a:hover {
 .contador {
   display: flex;
   justify-content: space-around;
-  background-color: var(--card-bg);
-  color: var(--text-color);
+  background-color: var(--card-bg, #f4f4f4);
+  color: var(--text-color, #333);
   padding: 2rem 0;
   text-align: center;
+  flex-wrap: wrap;
 }
+
 .contador div {
-  animation: aparecer 5s ease-out forwards;
+  animation: aparecer 2s ease-out forwards;
   opacity: 0;
   transform: translateY(30px);
+  margin: 1rem;
 }
+
 .contador div:nth-child(1) { animation-delay: 0.2s; }
 .contador div:nth-child(2) { animation-delay: 0.4s; }
-.contador div:nth-child(3) { animation-delay: 0.6s; }
 
 @keyframes aparecer {
   to {
@@ -253,6 +256,7 @@ body.dark-mode nav ul li a:hover {
     transform: translateY(0);
   }
 }
+
 .numero {
   font-size: 2rem;
   font-weight: bold;
